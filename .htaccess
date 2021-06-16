@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteBase /ci3
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond $1 !^(index\.php|assets|css|js|image)
+RewriteRule ^(.*)$ /ci3/index.php?/$1 [L]
