@@ -11,6 +11,39 @@
     <title>เลือกปัจจัยการวิเคราะห์</title>
 </head>
 <body>
+<div class="container-fluid">
+        <div class="row">
+            <!-- nav start here -->
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="#"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <img src="<?php echo base_url('assets/image/logo.png');?>" style="width: 5em;">
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link disabled" href="#">หน้าแรก</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">วิเคราะห์ข้อมูล</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">เลือกคลินิก</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link " href="#">แนะนำยา</a>
+                    </li>
+                  </ul>
+                  <div class="col-7"></div>
+                  <button class="btn btn-outline-success float-right" type="login">ล็อคอิน/ลงทะเบียน</button></span>
+                </div>
+              </nav>
+
+        </div>
+        
     <div class="container">
         <div class="row">
             <h1 style="text-align: center;">เลือกปัจจัยการวิเคราะห์</h1>
@@ -70,11 +103,15 @@
           <div class="row" style="position: center;">
             <br>
             <div class="col text-center mt-4">
-            <a href="<?php echo site_url('DiseaseRate/serchProvince');?>"><button class="btn btn-success" type="submit">วิเคราะห์</button></a>
+            <a href="<?php echo site_url('DiseaseRate/get4Show');?>"><button class="btn btn-success" type="button">วิเคราะห์</button></a>
             </form>
           </div>
         </div>
 
+    </div>
+
+    <div class="row" style="margin-left: 12%;">
+        <a href="<?php echo site_url('DiseaseRate/index');?>"><button class="btn btn-success navbar-btn" style="background-color: aliceblue; width:10%; height: 8vh; color: black;">ย้อนกลับ</button></a>
     </div>
      
 </body>

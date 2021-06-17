@@ -37,8 +37,8 @@ class DiseaseRate extends CI_Controller {
     public function serchProvince(){
         $this->load->view('template/อัตราการเกิดโรคกับที่อยู่อาศัยแสดง');
     }
-    public function update(){
-        echo "update Member";
+    public function get4Show(){
+        $this->load->view('template/เลือกปัจจัยการวิเคราะห์แสดง');
     }
     public function delete(){
         echo "delete Member";

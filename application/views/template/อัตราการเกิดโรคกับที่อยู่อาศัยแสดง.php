@@ -12,6 +12,39 @@
     <title>อัตราการเกิดโรคกับที่อยู่อาศัย</title>
 </head>
 <body>
+<div class="container-fluid">
+        <div class="row">
+            <!-- nav start here -->
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="#"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <img src="<?php echo base_url('assets/image/logo.png');?>" style="width: 5em;">
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link disabled" href="#">หน้าแรก</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">วิเคราะห์ข้อมูล</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">เลือกคลินิก</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link " href="#">แนะนำยา</a>
+                    </li>
+                  </ul>
+                  <div class="col-7"></div>
+                  <button class="btn btn-outline-success float-right" type="login">ล็อคอิน/ลงทะเบียน</button></span>
+                </div>
+              </nav>
+
+        </div>
+
     <div class="row">
         <h1 style="text-align: center;">อัตราการเกิดโรคกับที่อยู่อาศัย</h1>
     </div>

@@ -16,38 +16,48 @@
 </head>
 
 <body>
-    <!-- <nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <img src="image/logo_ev.png" width="200" height="50" alt="logo">
+   
+<div class="container-fluid">
+        <div class="row">
+            <!-- nav start here -->
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="#"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <img src="<?php echo base_url('assets/image/logo.png');?>" style="width: 5em;">
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link disabled" href="#">หน้าแรก</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">วิเคราะห์ข้อมูล</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">เลือกคลินิก</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link " href="#">แนะนำยา</a>
+                    </li>
+                  </ul>
+                  <div class="col-7"></div>
+                  <button class="btn btn-outline-success float-right" type="login">ล็อคอิน/ลงทะเบียน</button></span>
+                </div>
+              </nav>
+
         </div>
 
-        <ul class="nav navbar-nav navbar-color">
-            <li class="active font"><a href="#">หน้าแรก</a></li>
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">วิเคราะห์ข้อมูล<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">วิเคราะความเสี่ยงการเกิดโรค</a></li>
-                    <li><a href="#">อัตราการเกิดโรคกับปัจจัยต่างๆ</a></li>
-                </ul>
-            </li>
-            <li class="font"><a href="#">เลือกคลินิก</a></li>
-            <li class="font"><a href="#">แนะนำยา</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right mr-2">
-            <li>
-                <button onclick="document.location='#'" class="btn btn-success navbar-btn">เข้าสู่ระบบ/ลงทะเบียน</button>
-            </li>
-        </ul>
-    </div>
-</nav> -->
+
         <div class="row">
             <h1 style="text-align: center;">อัตราการเกิดโรคกับปัจจัยต่างๆ</h1>
         </div>
         <br>
         <div class="row mt-4">
             <div class="col-sm-6 mb-4" >
-            <a href="<?php echo site_url('DiseaseRate/get2');?>"><button type="button" class="btn btn-outline-light" style="background-image: url('<?php echo base_url('assets/image/imagetoclick2.jpg');?>'); width:50%; height: 10vh;margin-left:40%;">อัตราการเกิดโรคกับอายุ</button></a>
+            <a href="<?php echo site_url('DiseaseRate/get2');?>"><button type="button" class="btn btn-outline-light" style="background-image: url('<?php echo base_url('assets/image/imagetoclick2.jpg');?>'); width:50%; height: 10vh;margin-left:50%;">อัตราการเกิดโรคกับอายุ</button></a>
             </div>
             
             <div class="col-sm-6">
@@ -57,7 +67,7 @@
 
         <div class="row mt-4">
             <div class="col-sm-6 mb-4">
-            <a href="<?php echo site_url('DiseaseRate/get1');?>"><button type="button" class="btn btn-outline-light" style="background-image: url('<?php echo base_url('assets/image/imagetoclick2.jpg');?>'); width:50%; height: 10vh;margin-left:40%;">อัตราการเกิดโรคกับที่อยู่อาศัย</button></a>
+            <a href="<?php echo site_url('DiseaseRate/get1');?>"><button type="button" class="btn btn-outline-light" style="background-image: url('<?php echo base_url('assets/image/imagetoclick2.jpg');?>'); width:50%; height: 10vh;margin-left:50%;">อัตราการเกิดโรคกับที่อยู่อาศัย</button></a>
             </div>
             <div class="col-sm-6">
                 <a href="<?php echo site_url('DiseaseRate/get4');?>"><button type="button" class="btn btn-outline-light" style="background-image: url('<?php echo base_url('assets/image/imagetoclick2.jpg');?>'); width:50%; height: 10vh;">อัตราการเกิดโรคแบบเลือกเอง</button></a>
@@ -69,28 +79,3 @@
 </body>
 </html>
 
-<!-- <nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <img src="image/logo_ev.png" width="200" height="50" alt="logo">
-        </div>
-
-        <ul class="nav navbar-nav navbar-color">
-            <li class="active font"><a href="#">หน้าแรก</a></li>
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">วิเคราะห์ข้อมูล<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">วิเคราะความเสี่ยงการเกิดโรค</a></li>
-                    <li><a href="#">อัตราการเกิดโรคกับปัจจัยต่างๆ</a></li>
-                </ul>
-            </li>
-            <li class="font"><a href="#">เลือกคลินิก</a></li>
-            <li class="font"><a href="#">แนะนำยา</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right mr-2">
-            <li>
-                <button onclick="document.location='#'" class="btn btn-success navbar-btn">เข้าสู่ระบบ/ลงทะเบียน</button>
-            </li>
-        </ul>
-    </div>
-</nav> -->
