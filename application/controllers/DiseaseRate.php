@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Member extends CI_Controller {
+class DiseaseRate extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -23,7 +23,7 @@ class Member extends CI_Controller {
 		$this->load->view('template/อัตราการเกิดโรคกับปัจจัยต่างๆ');
 	}
     public function get1(){
-        $this->load->view('template/อัตราการเกิดโรคกับที่อยู่อาศัยแสดง');
+        $this->load->view('template/อัตราการเกิดโรคกับที่อยู่อาศัย');
     }
 	public function get2(){
         $this->load->view('template/อัตราการเกิดโรคกับอายุ');
@@ -31,8 +31,11 @@ class Member extends CI_Controller {
 	public function get3(){
         $this->load->view('template/อัตราการเกิดโรคกับอาชีพ');
     }
-    public function save(){
-        echo "save Member";
+	public function get4(){
+        $this->load->view('template/เลือกปัจจัยการวิเคราะห์');
+    }
+    public function serchProvince(){
+        $this->load->view('template/อัตราการเกิดโรคกับที่อยู่อาศัยแสดง');
     }
     public function update(){
         echo "update Member";

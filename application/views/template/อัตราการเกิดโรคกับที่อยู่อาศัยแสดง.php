@@ -37,7 +37,7 @@
 
 
     <div class="row" style="margin-left: 12%;">
-        <a href="<?php echo site_url('Member/index');?>"><button class="btn btn-success navbar-btn" style="background-color: aliceblue; width:10%; height: 8vh; color: black;">ย้อนกลับ</button></a>
+        <a href="<?php echo site_url('DiseaseRate/index');?>"><button class="btn btn-success navbar-btn" style="background-color: aliceblue; width:10%; height: 8vh; color: black;">ย้อนกลับ</button></a>
     </div>
     
 </body>

@@ -47,20 +47,20 @@
         <br>
         <div class="row mt-4">
             <div class="col-sm-6 mb-4" >
-            <a href="<?php echo site_url('Member/get2');?>"><button type="button" class="btn btn-outline-light" style="background-image: url('<?php echo base_url('assets/image/imagetoclick2.jpg');?>'); width:50%; height: 10vh;margin-left:40%;">อัตราการเกิดโรคกับอายุ</button></a>
+            <a href="<?php echo site_url('DiseaseRate/get2');?>"><button type="button" class="btn btn-outline-light" style="background-image: url('<?php echo base_url('assets/image/imagetoclick2.jpg');?>'); width:50%; height: 10vh;margin-left:40%;">อัตราการเกิดโรคกับอายุ</button></a>
             </div>
             
             <div class="col-sm-6">
-                <a href="<?php echo site_url('Member/get3');?>"><button type="button" class="btn btn-outline-light" style="background-image: url('<?php echo base_url('assets/image/imagetoclick2.jpg');?>'); width:50%; height: 10vh;">อัตราการเกิดโรคกับอาชีพ</button></a>
+                <a href="<?php echo site_url('DiseaseRate/get3');?>"><button type="button" class="btn btn-outline-light" style="background-image: url('<?php echo base_url('assets/image/imagetoclick2.jpg');?>'); width:50%; height: 10vh;">อัตราการเกิดโรคกับอาชีพ</button></a>
             </div>
         </div>
 
         <div class="row mt-4">
             <div class="col-sm-6 mb-4">
-            <a href="<?php echo site_url('Member/get1');?>"><button type="button" class="btn btn-outline-light" style="background-image: url('<?php echo base_url('assets/image/imagetoclick2.jpg');?>'); width:50%; height: 10vh;margin-left:40%;">อัตราการเกิดโรคกับที่อยู่อาศัย</button></a>
+            <a href="<?php echo site_url('DiseaseRate/get1');?>"><button type="button" class="btn btn-outline-light" style="background-image: url('<?php echo base_url('assets/image/imagetoclick2.jpg');?>'); width:50%; height: 10vh;margin-left:40%;">อัตราการเกิดโรคกับที่อยู่อาศัย</button></a>
             </div>
             <div class="col-sm-6">
-                <a href="#"><button type="button" class="btn btn-outline-light" style="background-image: url('<?php echo base_url('assets/image/imagetoclick2.jpg');?>'); width:50%; height: 10vh;">อัตราการเกิดโรคแบบเลือกเอง</button></a>
+                <a href="<?php echo site_url('DiseaseRate/get4');?>"><button type="button" class="btn btn-outline-light" style="background-image: url('<?php echo base_url('assets/image/imagetoclick2.jpg');?>'); width:50%; height: 10vh;">อัตราการเกิดโรคแบบเลือกเอง</button></a>
             </div>
         </div>
 
