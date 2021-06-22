@@ -5,24 +5,45 @@ class DiseaseRate extends CI_Controller {
 
 	public function index()
 	{
+        $data['title'] = "อัตราการเกิดโรคกับปัจจัยต่างๆ";
+        $this->load->view('head',$data);
+		$this->load->view('navbar');
 		$this->load->view('template/disease rate');
 	}
-    public function get1(){
+    public function get1()
+    {
+        $this->load->view('head');
+		$this->load->view('navbar');
         $this->load->view('template/disease rate housing');
     }
-	public function get2(){
+	public function get2()
+    {
+        $this->load->view('head');
+		$this->load->view('navbar');
         $this->load->view('template/disease rate age');
     }
-	public function get3(){
+	public function get3()
+    {
+        $this->load->view('head');
+		$this->load->view('navbar');
         $this->load->view('template/disease rate occupation');
     }
-	public function get4(){
+	public function get4()
+    {
+        $this->load->view('head');
+		$this->load->view('navbar');
         $this->load->view('template/analytical factor');
     }
-    public function serchProvince(){
+    public function serchProvince()
+    {
+        $this->load->view('head');
+		$this->load->view('navbar');
         $this->load->view('template/disease rate housing output');
     }
-    public function get4Show(){
+    public function get4Show()
+    {
+        $this->load->view('head');
+		$this->load->view('navbar');
         $this->load->view('template/analytical factor output');
     }
     public function delete(){

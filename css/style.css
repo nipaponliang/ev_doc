@@ -1,0 +1,39 @@
+.navbar {
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    border-bottom-color: #BBDBF6;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #12426A;
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.navbar-nav nav-item:hover {
+    border-bottom: 3px solid #1dd4a4;
+}
+
+.navbar-light .navbar-nav a.active {
+    border-bottom: 3px solid #1dd4a4;
+}
+
+.btn {
+    background-color: #09E5AB;
+    color: rgb(255, 255, 255);
+    box-shadow: 1px 2px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.btn:hover {
+    background-color: #ffffff;
+    color: #09E5AB;
+    border: 1px solid #09E5AB;
+    box-shadow: none;
+}
