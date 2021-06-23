@@ -40,7 +40,7 @@ class DiseaseRate extends CI_Controller {
     public function get4Show(){
         $this->load->view('template/เลือกปัจจัยการวิเคราะห์แสดง');
     }
-    public function delete(){
-        echo "delete Member";
+    public function datingShowUser(){
+        $this->load->view('template/profileตารางการนัดหมาย');
     }
 }

@@ -58,6 +58,7 @@
             </div>
             <div class="col-md-4">
                  <!-- ใส่กราฟวงกลม -->
+                 
             </div>
             <div class="col-md-4">
                 <h3 style="text-align: center;">1 ชื่อโรค 50%</h3>

@@ -37,7 +37,7 @@
                       <a class="nav-link" href="#">วิเคราะห์ข้อมูล</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">เลือกคลินิก</a>
+                      <a class="nav-link" href="<?php echo site_url('DiseaseRate/datingShowUser');?>">เลือกคลินิก</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link " href="#">แนะนำยา</a>
