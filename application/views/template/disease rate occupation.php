@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>อัตราการเกิดโรคกับอาชีพ</title>
 
-
-</head>
-<body>
 <div class="container-fluid">    
     <div class="row">
         <h1 style="text-align: center;">อัตราการเกิดโรคกับอาชีพ</h1>

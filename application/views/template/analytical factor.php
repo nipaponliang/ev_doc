@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>อัตราการเกิดโรคกับปัจจัยการวิเคราะห์ต่างๆ</title>
-
-
-</head>
-<body>
 
 <div class="container-fluid">   
     <div class="container">

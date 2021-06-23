@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>อัตราการเกิดโรคกับที่อยู่อาศัย</title>
-
-
-</head>
-<body>
 
     <div class="container-fluid">
         <div class="row">

@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>อัตราการเกิดโรคกับปัจจัยการวิเคราะห์ต่างๆ</title>
 
-
-</head>
-<body>
 <div class="container">
         <div class="row">
             <h1 style="text-align: center;">เลือกปัจจัยการวิเคราะห์</h1>
