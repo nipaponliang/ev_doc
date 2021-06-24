@@ -12,42 +12,42 @@ class DiseaseRate extends CI_Controller {
 	}
     public function get1()
     {
-        $data['title'] = "อัตราการเกิดโรคกับที่อยู่อาศัย"
+        $data['title'] = "อัตราการเกิดโรคกับที่อยู่อาศัย";
         $this->load->view('head',$data);
 		$this->load->view('navbar');
         $this->load->view('template/disease rate housing');
     }
 	public function get2()
     {
-        $data['title'] = "อัตราการเกิดโรคกับอายุ"
+        $data['title'] = "อัตราการเกิดโรคกับอายุ";
         $this->load->view('head',$data);
 		$this->load->view('navbar');
         $this->load->view('template/disease rate age');
     }
 	public function get3()
     {
-        $data['title'] = "อัตราการเกิดโรคกับอาชีพ"
+        $data['title'] = "อัตราการเกิดโรคกับอาชีพ";
         $this->load->view('head',$data);
 		$this->load->view('navbar');
         $this->load->view('template/disease rate occupation');
     }
 	public function get4()
     {
-        $data['title'] = "อัตราการเกิดโรคกับปัจจัยการวิเคราะห์ต่างๆ"
+        $data['title'] = "อัตราการเกิดโรคกับปัจจัยการวิเคราะห์ต่างๆ";
         $this->load->view('head',$data);
 		$this->load->view('navbar');
         $this->load->view('template/analytical factor');
     }
     public function serchProvince()
     {
-        $data['title'] = "อัตราการเกิดโรคกับที่อยู่อาศัย"
+        $data['title'] = "อัตราการเกิดโรคกับที่อยู่อาศัย";
         $this->load->view('head',$data);
 		$this->load->view('navbar');
         $this->load->view('template/disease rate housing output');
     }
     public function get4Show()
     {
-        $data['title'] = "อัตราการเกิดโรคกับปัจจัยการวิเคราะห์ต่างๆ"
+        $data['title'] = "อัตราการเกิดโรคกับปัจจัยการวิเคราะห์ต่างๆ";
         $this->load->view('head',$data);
 		$this->load->view('navbar');
         $this->load->view('template/analytical factor output');

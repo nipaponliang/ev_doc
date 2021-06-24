@@ -5,7 +5,15 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('head');
+		$data['title'] = "everydaydoctor";
+		$this->load->view('head',$data);
 		$this->load->view('navbar');
 	}
+	public function login()
+	{
+		$this->load->view('head');
+		$this->load->view('navbar');
+		$this->load->view('login');
+	}
+
 }

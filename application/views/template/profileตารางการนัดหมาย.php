@@ -41,45 +41,7 @@
 ?>
 
 <body>
-
-
-
 <div class="container-fluid">
-        <div class="row">
-            <!-- nav start here -->
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="#"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <img src="<?php echo base_url('assets/image/logo.png');?>" style="width: 5em;">
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">หน้าแรก</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">วิเคราะห์ข้อมูล</a>
-                    </li>
-                    <li class="nav-item active">
-                      <a class="nav-link disabled" href="#">เลือกคลินิก</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link " href="#">แนะนำยา</a>
-                    </li>
-                  </ul>
-                  <div class="col-7"></div>
-                  <button class="btn btn-outline-success float-right" type="login">ล็อคอิน/ลงทะเบียน</button></span>
-                </div>
-              </nav>
-
-        </div>
-
-        
-
-
     <div class="container">
   <h2>การนัดหมาย</h2>
 
@@ -107,7 +69,8 @@
         <td><?= $row["dating"]?></td>
         <td><?= $row["booking"]?></td>
         
-        <td><?= $row["status"]?><span style="margin-right:2em;"></span><button type="submit" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">ยกเลิกนัด</button></td>
+        <td><?= $row["status"]?><span style="margin-right:2em;"></span>
+        <button type="submit" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">ยกเลิกนัด</button></td>
         <?php $c++;?>
       </tr>
        
