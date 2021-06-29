@@ -96,7 +96,7 @@ class DiseaseRate extends CI_Controller {
 	{
 		$q  = "SELECT * FROM meeting_detail INNER JOIN doctor ON doctor.ID_doc = meeting_detail.ID_doc INNER JOIN patient ON patient.ID = meeting_detail.ID";
         	$data['rows'] = $this->db->query($q)->result_object();
-		$this->load->view('nav');
+		// $this->load->view('nav');
 		$this->load->view('treatment_history',$data);
 	}
 

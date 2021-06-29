@@ -151,7 +151,6 @@ div.content {
 
 <body>
 <div class="container-fluid">
-<<<<<<< HEAD
         <div class="row">
             <!-- nav start here -->
             <nav class="navbar navbar-expand-lg navbar-light">
@@ -194,8 +193,6 @@ div.content {
 
 <div class="content">
 
-=======
->>>>>>> 81c6617979fffa0b52cd01e73dc1a0946cfa3080
     <div class="container">
   <h2>การนัดหมาย</h2>
   </br>

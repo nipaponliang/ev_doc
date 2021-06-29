@@ -65,7 +65,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             var id =  $(this).data("id");
             $.ajax({
                 type: "POST",
-                url: "http://127.0.0.1/ci32/index.php/Api/get_data",
+                url: "<?php echo site_url('Api/get_data');?>",
                 data: {
                     id:id
                 },
@@ -89,7 +89,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             var id =  $(this).data("id");
             $.ajax({
                 type: "POST",
-                url: "http://127.0.0.1/ci32/index.php/Api/get_data",
+                url: "<?php echo site_url('Api/get_data');?>",
                 data: {
                     id:id
                 },
@@ -125,7 +125,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             var id = $(".cur_id").val();
             $.ajax({
                 type: "POST",
-                url: "http://127.0.0.1/ci32/index.php/Api/save_data",
+                url: "<?php echo site_url('Api/save_data_dc');?>",
                 data: {
                     id:id,
                     rate_1:2,
@@ -201,7 +201,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="form-group" action="<?php echo site_url('Api/save_data_dc');?>" >
 
                         <p>ให้คะแนนหมอ  : <input type="text" name="rating_1" style="margin-left:1em" /></p>
-                        <p>ให้คะแนนคลินิก :<input type="text" name="rating_2" style="margin-left:0.75em"/></p> -->
+                        <p>ให้คะแนนคลินิก :<input type="text" name="rating_2" style="margin-left:0.75em"/></p>
 
                     <br>
 <br>
@@ -259,7 +259,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
             <div class="modal-footer">
                 <div class="text-center" style="text-align: center;">
-                    <button type="submit" class="btn btn-success">กลับ</button>
+                    <button type="submit" class="btn btn-success" data-dismiss="modal" aria-label="Close">กลับ</button>
                 </div>
             </form>
                 </div>

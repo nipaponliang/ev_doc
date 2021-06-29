@@ -24,7 +24,7 @@
                         </li>
                     </ul>
                 </div>
-                <form class="form-inline my-2 my-lg-0" action="<?php echo site_url('Home/login');?>">
+                <form class="form-inline my-2 my-lg-0" action="<?php echo site_url('Register');?>">
                     <button class="btn my-2 my-sm-0" type="submit">เข้าสู่ระบบ / ลงทะเบียน</button>
                 </form>
             </nav>
