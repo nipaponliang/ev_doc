@@ -44,7 +44,8 @@
                     </li>
                   </ul>
                   <div class="col-7"></div>
-                  <button class="btn btn-outline-success float-right" type="login">ล็อคอิน/ลงทะเบียน</button></span>
+                  <a href="<?php echo site_url('DiseaseRate/profileShowUser');?>">ล็อคอิน/ลงทะเบียน</a>
+                  <!-- <button class="btn btn-outline-success float-right" type="login">ล็อคอิน/ลงทะเบียน</button> --> </span>
                 </div>
               </nav>
 
