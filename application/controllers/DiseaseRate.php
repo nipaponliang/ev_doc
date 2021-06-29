@@ -3,42 +3,54 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class DiseaseRate extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
 	public function index()
 	{
-		$this->load->view('template/อัตราการเกิดโรคกับปัจจัยต่างๆ');
+        $data['title'] = "อัตราการเกิดโรคกับปัจจัยต่างๆ";
+        $this->load->view('head',$data);
+		$this->load->view('navbar');
+		$this->load->view('template/disease rate');
 	}
-    public function get1(){
-        $this->load->view('template/อัตราการเกิดโรคกับที่อยู่อาศัย');
+    public function get1()
+    {
+        $data['title'] = "อัตราการเกิดโรคกับที่อยู่อาศัย";
+        $this->load->view('head',$data);
+		$this->load->view('navbar');
+        $this->load->view('template/disease rate housing');
     }
-	public function get2(){
-        $this->load->view('template/อัตราการเกิดโรคกับอายุ');
+	public function get2()
+    {
+        $data['title'] = "อัตราการเกิดโรคกับอายุ";
+        $this->load->view('head',$data);
+		$this->load->view('navbar');
+        $this->load->view('template/disease rate age');
     }
-	public function get3(){
-        $this->load->view('template/อัตราการเกิดโรคกับอาชีพ');
+	public function get3()
+    {
+        $data['title'] = "อัตราการเกิดโรคกับอาชีพ";
+        $this->load->view('head',$data);
+		$this->load->view('navbar');
+        $this->load->view('template/disease rate occupation');
     }
-	public function get4(){
-        $this->load->view('template/เลือกปัจจัยการวิเคราะห์');
+	public function get4()
+    {
+        $data['title'] = "อัตราการเกิดโรคกับปัจจัยการวิเคราะห์ต่างๆ";
+        $this->load->view('head',$data);
+		$this->load->view('navbar');
+        $this->load->view('template/analytical factor');
     }
-    public function serchProvince(){
-        $this->load->view('template/อัตราการเกิดโรคกับที่อยู่อาศัยแสดง');
+    public function serchProvince()
+    {
+        $data['title'] = "อัตราการเกิดโรคกับที่อยู่อาศัย";
+        $this->load->view('head',$data);
+		$this->load->view('navbar');
+        $this->load->view('template/disease rate housing output');
     }
-    public function get4Show(){
-        $this->load->view('template/เลือกปัจจัยการวิเคราะห์แสดง');
+    public function get4Show()
+    {
+        $data['title'] = "อัตราการเกิดโรคกับปัจจัยการวิเคราะห์ต่างๆ";
+        $this->load->view('head',$data);
+		$this->load->view('navbar');
+        $this->load->view('template/analytical factor output');
     }
     public function datingShowUser(){
 		$q = "SELECT * FROM datingtable";
