@@ -103,8 +103,8 @@ $row=$stmt->fetch()
 
 <div class="container-fluid">
         <div class="row">
-            <!-- nav start here -->
-            <nav class="navbar navbar-expand-lg navbar-light">
+ <!-- nav start here -->
+ <nav class="navbar navbar-expand-lg navbar-light">
                 <a class="navbar-brand" href="#"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
@@ -115,8 +115,15 @@ $row=$stmt->fetch()
                         <img src="<?php echo base_url('assets/image/logo.png');?>" style="width: 5em;">
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">หน้าแรก</a>
+                        <a class="nav-link" href="<?php echo site_url('Home/index');?>">หน้าแรก <span class="sr-only"></span></a>
                     </li>
+                     <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">วิเคราะห์ข้อมูล</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="<?php echo site_url('DiseaseRate/index');?>">วิเคราะห์ความเสี่ยงการเกิดโรค</a>
+                                <a class="dropdown-item" href="#">อัตราการเกิดโรคและปัจจัยอื่นๆ</a>
+                            </div>
+                        </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#">วิเคราะห์ข้อมูล</a>
                     </li>
@@ -127,19 +134,22 @@ $row=$stmt->fetch()
                       <a class="nav-link " href="#">แนะนำยา</a>
                     </li>
                   </ul>
-                  <div class="col-7 active"></div>
-                  <button class="btn btn-outline-success float-right" type="login">ล็อคอิน/ลงทะเบียน</button></span>
+                  </div>
+
+                  <div class="col-4"></div>
+                  <button class="btn btn-outline-success float-right" type="login" action="<?php echo site_url('Register');?>">ล็อคอิน/ลงทะเบียน</button></span>
                 </div>
               </nav>
+
 
         </div>
 
         <!-- side bar  -->
         <div class="sidebar">
-  <a style="font-size:1em;" href="#home"><span style="font-size:4em;" class="glyphicon glyphicon-calendar"></span></br>ตารางการนัดหมาย</a>
-  <a style="font-size:1em;" href="#news"><span style="font-size:4em;" class="glyphicon glyphicon-repeat"></span></br>ประวัติการรักษา</a>
-  <a style="font-size:1em;" href="#contact"><span style="font-size:4em;" class="glyphicon glyphicon-cog"></span></br>ตั้งค่าบัญชีผู้ใช้</a>
-  <a style="font-size:1em;" href="#about"><span style="font-size:4em;" class="glyphicon glyphicon-log-out"></span></br>ออกจากระบบ</a>
+        <a style="font-size:1em;" href="<?php echo site_url('DiseaseRate/datingShowUser');?>"><span style="font-size:4em;" class="glyphicon glyphicon-calendar"></span></br>ตารางการนัดหมาย</a>
+        <a style="font-size:1em;" href="<?php echo site_url('DiseaseRate/treatment_history');?>"><span style="font-size:4em;" class="glyphicon glyphicon-repeat"></span></br>ประวัติการรักษา</a>
+        <a style="font-size:1em;" href="#" class="active"><span style="font-size:4em;" class="glyphicon glyphicon-cog"></span></br>ตั้งค่าบัญชีผู้ใช้</a>
+        <a style="font-size:1em;" href="#about"><span style="font-size:4em;" class="glyphicon glyphicon-log-out"></span></br>ออกจากระบบ</a>
 </div>
 
 <div class="content">

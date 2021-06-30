@@ -60,5 +60,22 @@ class Api extends CI_Controller {
         WHERE meeting_detail.ID_meeting = $id  "; 
         $this->db->query($q);
     }
+    function cause_Cancel(){
+        $id = $this->input->post("id");
+        $causeCancel = $this->input->post("causeCancel");
+
+		$q = "UPDATE datingtable SET status = 'ยกเลิกการนัด'
+         WHERE `datingtable`.`nameDocID` = $id;
+        "; 
+        $this->db->query($q);
+
+        $s="INSERT INTO `causecancel` 
+        (`causeCancelID`, `causeCancel`, `nameDoc`, `detail`, `dating`) 
+        VALUES (NULL, $causeCancel, '', '', '');";
+        
+        $this->db->query($s);
+
+
+    }
 
 }

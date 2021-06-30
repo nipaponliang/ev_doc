@@ -32,21 +32,23 @@
         
         $("body").on("click",".mybutton",function(){
             $(".nameDoc").html("");
+            $(".des_html").html("");
             var id =  $(this).data("id");
             $.ajax({
                 type: "POST",
-                url: "http://localhost/ci3/api/get_dataUser",
+                url: "<?php echo site_url('Api/get_dataUser');?>",
                 data: {
                     id:id
                 },
                 success: function(res){
                     console.log(res);
-                    var htmlx = '<label for="recipient-name" class="col-form-label">รายการนัด: <span class="nameDoc">'+res.data.nameDoc+'</span></label>'+
+                    var htmlx = 
+                    '<label for="recipient-name" class="col-form-label">รายการนัด: <span class="nameDoc">'+res.data.nameDoc+'</span></label>'+
                     '<br><label for="recipient-name" class="col-form-label">รายละเอียดการนัด: <span class="detail">'+res.data.detail+'</span></label>'+
                     '<br><label for="recipient-name" class="col-form-label">วันนัดหมาย: <span class="dating">'+res.data.dating+'</span></label>';
+                    $(".cur_id").val(res.data.nameDocID);
                     $(".des_html").html(htmlx);
 
-                    $(".cur_id").val(res.data.nameDocID);
                 },
                 dataType: "json",
                 async: true,
@@ -54,15 +56,17 @@
         });
 
 
-        $(".save_btn").click(function(){
-            var rating = $("input[name=rating_1]").val();
+        $(".cancel_btn").click(function(){
+            var causeCancel = $("input[name=causeCancel]").val();
             var id = $(".cur_id").val();
+            alert("ยกเลิกสำเร็จ");
+
             $.ajax({
                 type: "POST",
-                url: "http://localhost/ci3/DiseaseRate/datingShowUser",
+                url: "<?php echo site_url('Api/cause_Cancel');?>",
                 data: {
                     id:id,
-                    rate:rating,
+                    causeCancel:causeCancel, 
                 },
                 success: function(res){
                     //console.log(res);
@@ -158,8 +162,8 @@ div.content {
 <body>
 <div class="container-fluid">
         <div class="row">
-            <!-- nav start here -->
-            <nav class="navbar navbar-expand-lg navbar-light">
+ <!-- nav start here -->
+ <nav class="navbar navbar-expand-lg navbar-light">
                 <a class="navbar-brand" href="#"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
@@ -170,13 +174,20 @@ div.content {
                         <img src="<?php echo base_url('assets/image/logo.png');?>" style="width: 5em;">
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">หน้าแรก</a>
+                        <a class="nav-link" href="<?php echo site_url('Home/index');?>">หน้าแรก <span class="sr-only"></span></a>
                     </li>
+                     <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">วิเคราะห์ข้อมูล</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="<?php echo site_url('DiseaseRate/index');?>">วิเคราะห์ความเสี่ยงการเกิดโรค</a>
+                                <a class="dropdown-item" href="#">อัตราการเกิดโรคและปัจจัยอื่นๆ</a>
+                            </div>
+                        </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#">วิเคราะห์ข้อมูล</a>
                     </li>
-                    <li class="nav-item active">
-                      <a class="nav-link disabled" href="#">เลือกคลินิก</a>
+                    <li class="nav-item">
+                      <a class="nav-link " href="#">เลือกคลินิก</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link " href="#">แนะนำยา</a>
@@ -184,18 +195,17 @@ div.content {
                   </ul>
                   </div>
 
-                  <div class="col-7"></div>
-                  <button class="btn btn-outline-success float-right" type="login">ล็อคอิน/ลงทะเบียน</button></span>
+                  <div class="col-4"></div>
+                  <button class="btn btn-outline-success float-right" type="login" action="<?php echo site_url('Register');?>">ล็อคอิน/ลงทะเบียน</button></span>
                 </div>
               </nav>
 
-        </div>
 
        <!-- side bar  -->
         <div class="sidebar">
   <a style="font-size:1em;" class="active" href="#home"><span style="font-size:4em;" class="glyphicon glyphicon-calendar"></span></br>ตารางการนัดหมาย</a>
   <a style="font-size:1em;" href="<?php echo site_url('DiseaseRate/treatment_history');?>"><span style="font-size:4em;" class="glyphicon glyphicon-repeat" ></span></br>ประวัติการรักษา</a>
-  <a style="font-size:1em;" href="#contact"><span style="font-size:4em;" class="glyphicon glyphicon-cog"></span></br>ตั้งค่าบัญชีผู้ใช้</a>
+  <a style="font-size:1em;" href="<?php echo site_url('DiseaseRate/profileShowUser');?>"><span style="font-size:4em;" class="glyphicon glyphicon-cog"></span></br>ตั้งค่าบัญชีผู้ใช้</a>
   <a style="font-size:1em;" href="#about"><span style="font-size:4em;" class="glyphicon glyphicon-log-out"></span></br>ออกจากระบบ</a>
 </div>
 
@@ -228,23 +238,13 @@ div.content {
  
       <tr>
         
-<<<<<<< HEAD
-
-=======
->>>>>>> 1f2f83943729c381ca709e9a45950f12761a1b87
       <td><?= $v->nameDoc?><br><?= $v->typeClinic?></td>
         <td><?= $v->detail?></td>
         <td><?= $v->dating?></td>
         <td><?= $v->booking?></td>
 
         <td><?= $v->status?><span style="margin-right:2em;"></span>
-<<<<<<< HEAD
         <button type="button" class="btn btn-danger mybutton" data-toggle="modal" data-target="#exampleModal" data-id="<?= $v->nameDocID?>" data-whatever="@mdo">ยกเลิกนัด</button></td>        
-=======
-        <button type="button" class="btn btn-danger mybutton" data-toggle="modal" data-target="#exampleModal" data-id="<?= $v->nameDocID?>" data-whatever="@mdo">ยกเลิกนัด</button></td>
-
-        <?php #$c++;?>
->>>>>>> 1f2f83943729c381ca709e9a45950f12761a1b87
       </tr>
        
     
@@ -293,24 +293,25 @@ div.content {
         <!-- <form action="<?php #echo site_url('DiseaseRate/datingShowUser');?>" method="GET"> -->
         <form action="<?php echo site_url('Api/get_causeCancel');?>" method="POST">
         <input type="hidden" class="cur_id" value=""/>
-          <div class="form-group des_html">
+          <div class="form-group">
             <!-- <span class="cancelButton"></span> -->
-            <label for="recipient-name" class="col-form-label" name="nameDoc" >รายการนัด: <span class="nameDoc"></span></label>
+            <span class="des_html"></span>
+            <!-- <label for="recipient-name" class="col-form-label" name="nameDoc">รายการนัด: <span class="nameDoc"></span></label>
             <label for="recipient-name" class="col-form-label" name="detail">รายละเอียดการนัด: <span class="detail"></span></label>
-            <label for="recipient-name" class="col-form-label" name="dating">วันนัดหมาย: <span class="dating"></span></label>
+            <label for="recipient-name" class="col-form-label" name="dating">วันนัดหมาย: <span class="dating"></span></label> -->
             <!-- <input type="text" class="form-control" id="recipient-name"> -->
           </div>
           <div class="form-group">
             <label for="message-text" class="col-form-label">สาเหตุการยกเลิก:</label>
-            
-            <textarea class="form-control" id="message-text" name="causeCancel"></textarea>
+
+            <input type="text" class="form-control" id="message-text" name="causeCancel"></textarea>
           </div>
         </form>
       </div>
       <div class="modal-footer">
         
       <!-- <input type="submit" class="btn btn-success" data-dismiss="modal"> -->
-        <button type="submit" class="btn btn-success" data-dismiss="modal">ยืนยัน</button>
+        <button type="submit" class="btn btn-success cancel_btn" data-dismiss="modal">ยืนยัน</button>
       </div>
     </div>
   </div>

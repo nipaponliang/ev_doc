@@ -206,6 +206,8 @@ div.content {
             var rate_1 = $("input[name=rating_1]:checked").val();
             var rate_2 = $("input[name=rating_2]:checked").val();
             var id = $(".cur_id").val();
+            alert("ให้คะแนนสำเร็จ");
+
             $.ajax({
                 type: "POST",
                 url: "<?php echo site_url('Api/save_data_dc');?>",
@@ -227,10 +229,11 @@ div.content {
    
 </script>
 <body>
+
 <div class="container-fluid">
         <div class="row">
-            <!-- nav start here -->
-            <nav class="navbar navbar-expand-lg navbar-light">
+ <!-- nav start here -->
+ <nav class="navbar navbar-expand-lg navbar-light">
                 <a class="navbar-brand" href="#"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
@@ -241,13 +244,20 @@ div.content {
                         <img src="<?php echo base_url('assets/image/logo.png');?>" style="width: 5em;">
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">หน้าแรก</a>
+                        <a class="nav-link" href="<?php echo site_url('Home/index');?>">หน้าแรก <span class="sr-only"></span></a>
                     </li>
+                     <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">วิเคราะห์ข้อมูล</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="<?php echo site_url('DiseaseRate/index');?>">วิเคราะห์ความเสี่ยงการเกิดโรค</a>
+                                <a class="dropdown-item" href="#">อัตราการเกิดโรคและปัจจัยอื่นๆ</a>
+                            </div>
+                        </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#">วิเคราะห์ข้อมูล</a>
                     </li>
-                    <li class="nav-item active">
-                      <a class="nav-link disabled" href="#">เลือกคลินิก</a>
+                    <li class="nav-item">
+                      <a class="nav-link " href="#">เลือกคลินิก</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link " href="#">แนะนำยา</a>
@@ -255,28 +265,30 @@ div.content {
                   </ul>
                   </div>
 
-                  <div class="col-7"></div>
-                  <button class="btn btn-outline-success float-right" type="login">ล็อคอิน/ลงทะเบียน</button></span>
+                  <div class="col-4"></div>
+                  <button class="btn btn-outline-success float-right" type="login" action="<?php echo site_url('Register');?>">ล็อคอิน/ลงทะเบียน</button></span>
                 </div>
               </nav>
 
+
         </div>
 
-       <!-- side bar  -->
+        <!-- side bar  -->
         <div class="sidebar">
-  <a style="font-size:1em;" href="<?php echo site_url('DiseaseRate/datingShowUser');?>"><span style="font-size:4em;" class="glyphicon glyphicon-calendar"></span></br>ตารางการนัดหมาย</a>
-  <a style="font-size:1em;" href="#" class="active" ><span style="font-size:4em;" class="glyphicon glyphicon-repeat" ></span></br>ประวัติการรักษา</a>
-  <a style="font-size:1em;" href="<?php echo site_url('DiseaseRate/profileShowUser');?>"><span style="font-size:4em;" class="glyphicon glyphicon-cog"></span></br>ตั้งค่าบัญชีผู้ใช้</a>
-  <a style="font-size:1em;" href="#about"><span style="font-size:4em;" class="glyphicon glyphicon-log-out"></span></br>ออกจากระบบ</a>
+        <a style="font-size:1em;" href="<?php echo site_url('DiseaseRate/datingShowUser');?>"><span style="font-size:4em;" class="glyphicon glyphicon-calendar"></span></br>ตารางการนัดหมาย</a>
+        <a style="font-size:1em;" href="#"  class="active"><span style="font-size:4em;" class="glyphicon glyphicon-repeat"></span></br>ประวัติการรักษา</a>
+        <a style="font-size:1em;" href="<?php echo site_url('DiseaseRate/profileShowUser');?>"><span style="font-size:4em;" class="glyphicon glyphicon-cog"></span></br>ตั้งค่าบัญชีผู้ใช้</a>
+        <a style="font-size:1em;" href="#about"><span style="font-size:4em;" class="glyphicon glyphicon-log-out"></span></br>ออกจากระบบ</a>
 </div>
-
+</div>
+<div class="content">
 
     <div class="container-fluid">
         <div class="row">
             <div class="col-2">
 
             </div>
-            <div class="col-10">
+            <div class="col-8">
                 <div class="table-responsive">          
                     <table class="table">
                       <thead>
@@ -331,18 +343,43 @@ div.content {
                     <div class="form-group" action="<?php echo site_url('Api/save_data_dc');?>" >
 
                         <p>ให้คะแนนหมอ  : </p>
-                        <input type="radio" name="rating_1" value="1" id="star-1" class="star__radio visuhide">  <label class="star__item" for="star-1"><span class="visuhide">1</span></label>
-                        <input type="radio" name="rating_1" value="2" id="star-2" class="star__radio visuhide">  <label class="star__item" for="star-2"><span class="visuhide">2</span></label>
-                        <input type="radio" name="rating_1" value="3" id="star-3" class="star__radio visuhide">  <label class="star__item" for="star-3"><span class="visuhide">3</span></label>
-                        <input type="radio" name="rating_1" value="4" id="star-4" class="star__radio visuhide">  <label class="star__item" for="star-4"><span class="visuhide">4</span></label>
-                        <input type="radio" name="rating_1" value="5" id="star-5" class="star__radio visuhide">  <label class="star__item" for="star-5"><span class="visuhide">5</span></label>
+                            <table style="margin-left: auto; margin-right: auto;">
+                            <tr>
+                              <td style="width:50px"><input type="radio" name="rating_1" value="1" id="star-1" class="star__radio visuhide"></td>
+                              <td style="width:50px"><input type="radio" name="rating_1" value="2" id="star-2" class="star__radio visuhide"></td>
+                              <td style="width:50px"><input type="radio" name="rating_1" value="3" id="star-3" class="star__radio visuhide"></td>
+                              <td style="width:50px"><input type="radio" name="rating_1" value="4" id="star-4" class="star__radio visuhide"></td>
+                              <td style="width:50px"><input type="radio" name="rating_1" value="5" id="star-5" class="star__radio visuhide"></td>
+
+                            </tr>
+                            <tr>
+                              <td style="width:50px"><label class="star__item" for="star-1"><span class="visuhide">1</span></label></td>
+                              <td style="width:50px"><label class="star__item" for="star-2"><span class="visuhide">2</span></label></td>
+                              <td style="width:50px"><label class="star__item" for="star-3"><span class="visuhide">3</span></label></td>
+                              <td style="width:50px"><label class="star__item" for="star-4"><span class="visuhide">4</span></label></td>
+                              <td style="width:50px"><label class="star__item" for="star-5"><span class="visuhide">5</span></label></td>
+                            </tr>
+                            </table>
+<br>
 
                         <p>ให้คะแนนคลินิก :</p>
-                        <input type="radio" name="rating_2" value="1" id="star-1" class="star__radio visuhide">  <label class="star__item" for="star-1"><span class="visuhide">1</span></label>
-                        <input type="radio" name="rating_2" value="2" id="star-2" class="star__radio visuhide">  <label class="star__item" for="star-2"><span class="visuhide">2</span></label>
-                        <input type="radio" name="rating_2" value="3" id="star-3" class="star__radio visuhide">  <label class="star__item" for="star-3"><span class="visuhide">3</span></label>
-                        <input type="radio" name="rating_2" value="4" id="star-4" class="star__radio visuhide">  <label class="star__item" for="star-4"><span class="visuhide">4</span></label>
-                        <input type="radio" name="rating_2" value="5" id="star-5" class="star__radio visuhide">  <label class="star__item" for="star-5"><span class="visuhide">5</span></label>
+                        <table style="margin-left: auto; margin-right: auto;">
+                            <tr>
+                              <td style="width:50px"><input type="radio" name="rating_2" value="1" id="star-1" class="star__radio visuhide"></td>
+                              <td style="width:50px"><input type="radio" name="rating_2" value="2" id="star-2" class="star__radio visuhide"></td>
+                              <td style="width:50px"><input type="radio" name="rating_2" value="3" id="star-3" class="star__radio visuhide"></td>
+                              <td style="width:50px"><input type="radio" name="rating_2" value="4" id="star-4" class="star__radio visuhide"></td>
+                              <td style="width:50px"><input type="radio" name="rating_2" value="5" id="star-5" class="star__radio visuhide"></td>
+
+                            </tr>
+                            <tr>
+                              <td style="width:50px"><label class="star__item" for="star-1"><span class="visuhide">1</span></label></td>
+                              <td style="width:50px"><label class="star__item" for="star-2"><span class="visuhide">2</span></label></td>
+                              <td style="width:50px"><label class="star__item" for="star-3"><span class="visuhide">3</span></label></td>
+                              <td style="width:50px"><label class="star__item" for="star-4"><span class="visuhide">4</span></label></td>
+                              <td style="width:50px"><label class="star__item" for="star-5"><span class="visuhide">5</span></label></td>
+                            </tr>
+                            </table>
 
 
 
