@@ -95,7 +95,7 @@ class DiseaseRate extends CI_Controller {
 	public function treatment_history()
 	{
 		$q  = "SELECT * FROM meeting_detail INNER JOIN doctor ON doctor.ID_doc = meeting_detail.ID_doc INNER JOIN patient ON patient.ID = meeting_detail.ID";
-        	$data['rows'] = $this->db->query($q)->result_object();
+        $data['rows'] = $this->db->query($q)->result_object();
         $data['title'] = "ประวัติการรักษา";
         $this->load->view('head',$data);
         $this->load->view('navbar');
