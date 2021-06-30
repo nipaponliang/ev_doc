@@ -84,11 +84,17 @@
     a {
       text-align:center;
     }
-
+    img{
+      display:block;
+      margin-left:auto;
+      margin-right:auto;
+      width:70%;
+    }
     /* ตั้งแต่ตรงนี้เป็น side bar */
     body {
   margin: 0;
   font-family: "Lato", sans-serif;
+ 
 }
 
 .sidebar {
@@ -186,7 +192,7 @@ div.content {
        <!-- side bar  -->
         <div class="sidebar">
   <a style="font-size:1em;" class="active" href="#home"><span style="font-size:4em;" class="glyphicon glyphicon-calendar"></span></br>ตารางการนัดหมาย</a>
-  <a style="font-size:1em;" href="#news"><span style="font-size:4em;" class="glyphicon glyphicon-repeat"></span></br>ประวัติการรักษา</a>
+  <a style="font-size:1em;" href="<?php echo site_url('DiseaseRate/treatment_history');?>"><span style="font-size:4em;" class="glyphicon glyphicon-repeat" ></span></br>ประวัติการรักษา</a>
   <a style="font-size:1em;" href="#contact"><span style="font-size:4em;" class="glyphicon glyphicon-cog"></span></br>ตั้งค่าบัญชีผู้ใช้</a>
   <a style="font-size:1em;" href="#about"><span style="font-size:4em;" class="glyphicon glyphicon-log-out"></span></br>ออกจากระบบ</a>
 </div>
@@ -220,26 +226,14 @@ div.content {
  
       <tr>
         
-<<<<<<< HEAD
+
       <td><?= $v->nameDoc?><br><?= $v->typeClinic?></td>
         <td><?= $v->detail?></td>
         <td><?= $v->dating?></td>
         <td><?= $v->booking?></td>
 
         <td><?= $v->status?><span style="margin-right:2em;"></span>
-        <button type="button" class="btn btn-danger mybutton" data-toggle="modal" data-target="#exampleModal" data-id="<?= $v->nameDocID?>" data-whatever="@mdo">ยกเลิกนัด</button></td>
-
-        <?php #$c++;?>
-=======
-        <td><?= $row["nameDoc"]?></br><?= $row["typeClinic"]?></td>
-        <td><?= $row["detail"]?></td>
-        <td><?= $row["dating"]?></td>
-        <td><?= $row["booking"]?></td>
-        
-        <td><?= $row["status"]?><span style="margin-right:2em;"></span>
-        <button type="submit" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">ยกเลิกนัด</button></td>
-        <?php $c++;?>
->>>>>>> 81c6617979fffa0b52cd01e73dc1a0946cfa3080
+        <button type="button" class="btn btn-danger mybutton" data-toggle="modal" data-target="#exampleModal" data-id="<?= $v->nameDocID?>" data-whatever="@mdo">ยกเลิกนัด</button></td>        
       </tr>
        
     

@@ -90,7 +90,7 @@ div.content {
 </style>
 <?php
     // include "connect.php";
-        $pdo = new PDO("mysql:host=localhost;dbname=datingshowuserdb;charset=utf8", "root", ""); //dbname=แก้ชื่อตามมุ้ย
+        $pdo = new PDO("mysql:host=localhost;dbname=test;charset=utf8", "root", ""); //dbname=แก้ชื่อตามมุ้ย
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);   
         $stmt = $pdo->prepare("SELECT * FROM profileuser");
         $stmt->execute()
@@ -150,7 +150,7 @@ $row=$stmt->fetch()
     <div class="col-4">
     </div>
     <div class="col-4">
-    <h2>การนัดหมาย</h2>
+    <h2>Profile User</h2>
   </br>
   <!-- class="rounded-circle" -->
   <img src="<?php echo base_url('assets/image/profile.jpg');?>" alt="" class="rounded-circle">
