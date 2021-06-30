@@ -9,6 +9,9 @@ class Register extends CI_Controller {
         $this->load->model('register_model');
     }
     function index(){
+        $data['title'] = "สมัครสมาชิก";
+        $this->load->view('head',$data);
+		$this->load->view('navbar');
         $this->load->view('template/register');
     }
     function validation(){
