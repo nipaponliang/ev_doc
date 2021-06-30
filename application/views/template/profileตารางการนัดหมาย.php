@@ -182,6 +182,8 @@ div.content {
                       <a class="nav-link " href="#">แนะนำยา</a>
                     </li>
                   </ul>
+                  </div>
+
                   <div class="col-7"></div>
                   <button class="btn btn-outline-success float-right" type="login">ล็อคอิน/ลงทะเบียน</button></span>
                 </div>
