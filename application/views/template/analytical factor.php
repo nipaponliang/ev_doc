@@ -1,4 +1,15 @@
-
+<style>
+    body{
+        font-family: Kanit;
+        
+    }
+    h2{
+        font-size: 28px;
+    }
+    h3{
+        font-size: 24px;
+    }
+</style>
 <div class="container-fluid">   
     <div class="container">
         <div class="row">
@@ -59,7 +70,7 @@
           <div class="row" style="position: center;">
             <br>
             <div class="col text-center mt-4">
-            <a href="<?php echo site_url('DiseaseRate/get4Show');?>"><button class="btn btn-success" type="button">วิเคราะห์</button></a>
+            <a href="<?php echo site_url('DiseaseRate/get4Show');?>"><button class="btn btn" type="button">วิเคราะห์</button></a>
             </form>
           </div>
         </div>

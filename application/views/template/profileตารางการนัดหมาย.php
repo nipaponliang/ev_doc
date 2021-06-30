@@ -220,7 +220,6 @@ div.content {
  
       <tr>
         
-<<<<<<< HEAD
       <td><?= $v->nameDoc?><br><?= $v->typeClinic?></td>
         <td><?= $v->detail?></td>
         <td><?= $v->dating?></td>
@@ -230,16 +229,6 @@ div.content {
         <button type="button" class="btn btn-danger mybutton" data-toggle="modal" data-target="#exampleModal" data-id="<?= $v->nameDocID?>" data-whatever="@mdo">ยกเลิกนัด</button></td>
 
         <?php #$c++;?>
-=======
-        <td><?= $row["nameDoc"]?></br><?= $row["typeClinic"]?></td>
-        <td><?= $row["detail"]?></td>
-        <td><?= $row["dating"]?></td>
-        <td><?= $row["booking"]?></td>
-        
-        <td><?= $row["status"]?><span style="margin-right:2em;"></span>
-        <button type="submit" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">ยกเลิกนัด</button></td>
-        <?php $c++;?>
->>>>>>> 81c6617979fffa0b52cd01e73dc1a0946cfa3080
       </tr>
        
     

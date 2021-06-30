@@ -24,7 +24,7 @@ class Api extends CI_Controller {
     }
 
     public function get_causeCancel(){
-        $connect = mysqli_connect('localhost','root','','datingshowuserdb');
+        $connect = mysqli_connect('localhost','root','','test');
         if (mysqli_connect_error($connect)) {
             echo 'failed to connect';
         }

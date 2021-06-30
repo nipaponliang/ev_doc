@@ -90,7 +90,7 @@ div.content {
 </style>
 <?php
     // include "connect.php";
-        $pdo = new PDO("mysql:host=localhost;dbname=datingshowuserdb;charset=utf8", "root", ""); //dbname=แก้ชื่อตามมุ้ย
+        $pdo = new PDO("mysql:host=localhost;dbname=test;charset=utf8", "root", "");
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);   
         $stmt = $pdo->prepare("SELECT * FROM profileuser");
         $stmt->execute()
