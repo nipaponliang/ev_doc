@@ -24,7 +24,7 @@ class Api extends CI_Controller {
     }
 
     public function get_causeCancel(){
-        $connect = mysqli_connect('localhost','root','','datingshowuserdb');
+        $connect = mysqli_connect('localhost','root','','test');
         if (mysqli_connect_error($connect)) {
             echo 'failed to connect';
         }
@@ -52,12 +52,13 @@ class Api extends CI_Controller {
 
     function save_data_dc(){
         $id = $this->input->post("id");
-        // $rate_1 = $this->input->post("rate_1");
-        // $rate_2 = $this->input->post("rate_2");
+        $rate_1 = $this->input->post("rate_1");
+        $rate_2 = $this->input->post("rate_2");
 
-		$q = "UPDATE meeting_detail SET rating_doc = 6,
-        rating_cli = 2
-        WHERE meeting_detail.ID_meeting = 2 "; 
+		$q = "UPDATE meeting_detail SET rating_doc = $rate_1,
+        rating_cli = $rate_2 
+        WHERE meeting_detail.ID_meeting = $id  "; 
+        $this->db->query($q);
     }
 
 }

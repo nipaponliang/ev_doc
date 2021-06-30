@@ -1,5 +1,5 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+<!-- <?php
+// defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
@@ -24,6 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>treatment history</title>
+<<<<<<< HEAD
 </head>
 <style>
 /* ตั้งแต่ตรงนี้เป็น side bar */
@@ -82,6 +83,9 @@ div.content {
   }
 }
 </style>
+=======
+</head> -->
+>>>>>>> 1f2f83943729c381ca709e9a45950f12761a1b87
 <script>
     $('#exampleModal').on('show.bs.modal', function (event) {
         var button = $(event.relatedTarget)
@@ -187,7 +191,7 @@ div.content {
         });
         
         $(".save_btn").click(function(){
-            var rate_1 = $("input[name=rating_1]").val();
+            var rate_1 = $("input[name=rating_1]:checked").val();
             var rate_2 = $("input[name=rating_2]").val();
             var id = $(".cur_id").val();
             $.ajax({
@@ -195,7 +199,7 @@ div.content {
                 url: "<?php echo site_url('Api/save_data_dc');?>",
                 data: {
                     id:id,
-                    rate_1:2,
+                    rate_1:rate_1,
                     rate_2:rate_2,
                 },
                 success: function(res){
@@ -278,8 +282,14 @@ div.content {
                     </div>
                     <div class="form-group" action="<?php echo site_url('Api/save_data_dc');?>" >
 
-                        <p>ให้คะแนนหมอ  : <input type="text" name="rating_1" style="margin-left:1em" /></p>
-                        <p>ให้คะแนนคลินิก :<input type="text" name="rating_2" style="margin-left:0.75em"/></p>
+                        <!-- <p>ให้คะแนนหมอ  : <input type="text" name="rating_1" style="margin-left:1em" /></p>
+                        <p>ให้คะแนนคลินิก :<input type="text" name="rating_2" style="margin-left:0.75em"/></p> -->
+                        <input type="radio" id="html" name="rating_1" value="HTML">
+<label for="html">HTML</label><br>
+<input type="radio" id="css" name="rating_1" value="CSS">
+<label for="css">CSS</label><br>
+<input type="radio" id="javascript" name="rating_1" value="JavaScript">
+<label for="javascript">JavaScript</label>
 
                     <br>
 <br>

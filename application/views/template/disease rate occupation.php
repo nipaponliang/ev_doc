@@ -1,4 +1,16 @@
 
+<style>
+    body{
+        font-family: Kanit;
+        
+    }
+    h2{
+        font-size: 28px;
+    }
+    h3{
+        font-size: 24px;
+    }
+</style>
 <div class="container-fluid">    
     <div class="row">
         <h1 style="text-align: center;">อัตราการเกิดโรคกับอาชีพ</h1>
@@ -14,9 +26,11 @@
                 <h3 style="text-align: center;">1 โปรแกรมมเมอร์</h3>
             </div>
             <div class="col-md-4">
-                <button type="button" class="btn btn-outline-light" style="background-image: url('<?php echo base_url('assets/image/imagetoclick2.jpg');?>'); width:50%; height: 10vh;margin-left:40%;">อัตราการเกิดโรคกับอายุ</button>
+            <img src="<?php echo base_url('img');?>/pie.png" width="250" height="auto">
             </div>
-            <div class="col-md-4">
+            <div class="col-md-2">
+                <br>
+                <br>
                 <h3 style="text-align: center;">1 ชื่อโรค 50%</h3>
                 <h3 style="text-align: center;">1 ชื่อโรค 50%</h3>
                 <h3 style="text-align: center;">1 ชื่อโรค 50%</h3>

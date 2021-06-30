@@ -24,6 +24,8 @@ class Register extends CI_Controller {
         if($this->form_validation->run()){
             $verification_key = md5(rand());
             $encrypted_password = $this->encrypt->encode($this->input->post('user_password'));
+            // var_dump($encrypted_password);
+            // exit();
             $data = array(
                 'email'     => $this->input->post('email'),
                 'firstname' => $this->input->post('first_name'),
@@ -34,7 +36,10 @@ class Register extends CI_Controller {
                 'verification_key'  => $verification_key 
             );
             $id=$this->register_model->insert($data);
+            // var_dump($id);
+            // exit();
             if($id>0){
+                
                 $subject = "Please verify email for login";
                 $message = "
                 <p>Hi ".$this->input->post('first_name')."</p>
@@ -58,7 +63,7 @@ class Register extends CI_Controller {
                 $this->load->library('email',$config);
     
                 $this->email->set_newline("\r\n");
-                $this->email->form('nipapon.li@kkumail.com');
+                $this->email->from('nipapon.li@kkumail.com');
                 //info@webslesson.info
                 $this->email->to($this->input->post('email'));
                 $this->email->subject($subject);
@@ -66,6 +71,8 @@ class Register extends CI_Controller {
                 if($this->email->send()){
                     $this->session->set_flashdata('message','Check in your email for email verification mail');
                     redirect('register');
+                }else{
+                    echo "can't send.";
                 }
             }
 

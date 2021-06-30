@@ -1,4 +1,9 @@
-
+<style>
+    body{
+        font-family: Kanit;
+        font-size: 36px;
+    }
+</style>
 <div class="container-fluid">
         <div class="row">
             <h1 style="text-align: center;">อัตราการเกิดโรคกับปัจจัยต่างๆ</h1>

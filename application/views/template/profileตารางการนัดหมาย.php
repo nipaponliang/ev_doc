@@ -226,14 +226,23 @@ div.content {
  
       <tr>
         
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1f2f83943729c381ca709e9a45950f12761a1b87
       <td><?= $v->nameDoc?><br><?= $v->typeClinic?></td>
         <td><?= $v->detail?></td>
         <td><?= $v->dating?></td>
         <td><?= $v->booking?></td>
 
         <td><?= $v->status?><span style="margin-right:2em;"></span>
+<<<<<<< HEAD
         <button type="button" class="btn btn-danger mybutton" data-toggle="modal" data-target="#exampleModal" data-id="<?= $v->nameDocID?>" data-whatever="@mdo">ยกเลิกนัด</button></td>        
+=======
+        <button type="button" class="btn btn-danger mybutton" data-toggle="modal" data-target="#exampleModal" data-id="<?= $v->nameDocID?>" data-whatever="@mdo">ยกเลิกนัด</button></td>
+
+        <?php #$c++;?>
+>>>>>>> 1f2f83943729c381ca709e9a45950f12761a1b87
       </tr>
        
     

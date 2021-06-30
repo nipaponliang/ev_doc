@@ -1,4 +1,15 @@
-
+<style>
+    body{
+        font-family: Kanit;
+        
+    }
+    h2{
+        font-size: 28px;
+    }
+    h3{
+        font-size: 24px;
+    }
+</style>
 <div class="container">
         <div class="row">
             <h1 style="text-align: center;">เลือกปัจจัยการวิเคราะห์</h1>
@@ -55,16 +66,19 @@
               </select>
             </div>
           </div>
+
+          
           <div class="row" style="position: center;">
             <br>
             <div class="col text-center mt-4">
-            <a href="<?php echo site_url('DiseaseRate/get4Show');?>"><button class="btn btn-success" type="button">วิเคราะห์</button></a>
+            <a href="<?php echo site_url('DiseaseRate/get4Show');?>"><button class="btn btn" type="button">วิเคราะห์</button></a>
             </form>
           </div>
         </div>
 
     </div>
-
+          <br>
+          <br>
     <div class="container">
         <div class="row">
             
@@ -72,9 +86,14 @@
                 
             </div>
             <div class="col-md-4">
-                 <!-- ใส่กราฟวงกลม -->
+              <h2 style="text-align: center;"> ผลการวิเคราะห์</h2>
+            <img src="<?php echo base_url('img');?>/pie.png" width="250" height="auto"> <!-- ใส่กราฟวงกลม -->
             </div>
-            <div class="col-md-4">
+            <div class="col-md-2">
+            <br>
+            <br>
+            <br>
+            <br>
                 <h3 style="text-align: center;">1 ชื่อโรค 50%</h3>
                 <h3 style="text-align: center;">1 ชื่อโรค 50%</h3>
                 <h3 style="text-align: center;">1 ชื่อโรค 50%</h3>

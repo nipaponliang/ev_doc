@@ -90,7 +90,11 @@ div.content {
 </style>
 <?php
     // include "connect.php";
+<<<<<<< HEAD
         $pdo = new PDO("mysql:host=localhost;dbname=test;charset=utf8", "root", ""); //dbname=แก้ชื่อตามมุ้ย
+=======
+        $pdo = new PDO("mysql:host=localhost;dbname=test;charset=utf8", "root", "");
+>>>>>>> 1f2f83943729c381ca709e9a45950f12761a1b87
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);   
         $stmt = $pdo->prepare("SELECT * FROM profileuser");
         $stmt->execute()
