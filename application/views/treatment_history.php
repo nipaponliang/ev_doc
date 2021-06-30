@@ -1,5 +1,5 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+<!-- <?php
+// defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,14 +7,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php echo base_url('assets/css/')?>treatment_css.css">
     <title>treatment history</title>
-</head>
+</head> -->
 <script>
     $('#exampleModal').on('show.bs.modal', function (event) {
         var button = $(event.relatedTarget)
@@ -120,7 +120,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         });
         
         $(".save_btn").click(function(){
-            var rate_1 = $("input[name=rating_1]").val();
+            var rate_1 = $("input[name=rating_1]:checked").val();
             var rate_2 = $("input[name=rating_2]").val();
             var id = $(".cur_id").val();
             $.ajax({
@@ -128,7 +128,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 url: "<?php echo site_url('Api/save_data_dc');?>",
                 data: {
                     id:id,
-                    rate_1:2,
+                    rate_1:rate_1,
                     rate_2:rate_2,
                 },
                 success: function(res){
@@ -200,8 +200,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                     <div class="form-group" action="<?php echo site_url('Api/save_data_dc');?>" >
 
-                        <p>ให้คะแนนหมอ  : <input type="text" name="rating_1" style="margin-left:1em" /></p>
-                        <p>ให้คะแนนคลินิก :<input type="text" name="rating_2" style="margin-left:0.75em"/></p>
+                        <!-- <p>ให้คะแนนหมอ  : <input type="text" name="rating_1" style="margin-left:1em" /></p>
+                        <p>ให้คะแนนคลินิก :<input type="text" name="rating_2" style="margin-left:0.75em"/></p> -->
+                        <input type="radio" id="html" name="rating_1" value="HTML">
+<label for="html">HTML</label><br>
+<input type="radio" id="css" name="rating_1" value="CSS">
+<label for="css">CSS</label><br>
+<input type="radio" id="javascript" name="rating_1" value="JavaScript">
+<label for="javascript">JavaScript</label>
 
                     <br>
 <br>
