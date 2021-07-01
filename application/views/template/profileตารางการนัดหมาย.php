@@ -59,7 +59,7 @@
         $(".cancel_btn").click(function(){
             var causeCancel = $("input[name=causeCancel]").val();
             var id = $(".cur_id").val();
-            alert("ยกเลิกสำเร็จ");
+            //alert("ยกเลิกสำเร็จ");
 
             $.ajax({
                 type: "POST",
@@ -70,7 +70,13 @@
                 },
                 success: function(res){
                     //console.log(res);
-                    alert(res.msg);
+                    if(res.flag==1){
+                      alert(res.msg);
+                      location.reload();
+                    }else{
+                      alert(res.msg);
+                    }
+                    
                 },
                 dataType: "json",
                 async: true,

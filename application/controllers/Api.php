@@ -69,12 +69,15 @@ class Api extends CI_Controller {
         "; 
         $this->db->query($q);
 
+        $q = "SELECT * FROM datingtable WHERE nameDocID=".$id;
+        $row_data = $this->db->query($q)->row();
+
         $s="INSERT INTO `causecancel` 
         (`causeCancelID`, `causeCancel`, `nameDoc`, `detail`, `dating`) 
-        VALUES (NULL, $causeCancel, '', '', '');";
+        VALUES (NULL, '".$causeCancel."', '".$row_data->nameDoc."', '".$row_data->detail."', '".$row_data->dating."');";
         
         $this->db->query($s);
-
+        echo json_encode(array("flag"=>1,"msg"=>"สำเร็จ"));
 
     }
 
