@@ -10,6 +10,7 @@
         font-size: 24px;
     }
 </style>
+
 <div class="container-fluid">
     <div class="row">
         <h1 style="text-align: center;">อัตราการเกิดโรคกับอายุ</h1>
@@ -23,7 +24,18 @@
                 
             </div>
             <div class="col-md-4">
-                <img src="<?php echo base_url('img');?>/pie.png" width="250" height="auto">
+            <div id="graph">
+                <script>
+                    Morris.Bar({
+                    element: 'graph',
+                    data: <?php echo $data;?>,
+                    xkey: 'name',
+                    ykeys: ['total'],
+                    labels: ['total']
+                    
+                    });
+                </script>
+            </div>
             </div>
             <div class="col-md-2">
             <br>

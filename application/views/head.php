@@ -8,6 +8,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
     <meta charset="utf-8">
     <title><?= $title ?></title>
+    <link rel="stylesheet" href="<?php echo base_url().'assets/css/morris.css'?>">
+
+    <script src="<?php echo base_url().'assets/js/jquery.min.js'?>"></script>
+    <script src="<?php echo base_url().'assets/js/raphael-min.js'?>"></script>
+    <script src="<?php echo base_url().'assets/js/morris.min.js'?>"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

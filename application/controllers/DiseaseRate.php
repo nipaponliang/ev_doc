@@ -2,6 +2,12 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class DiseaseRate extends CI_Controller {
+    function __construct(){
+        parent::__construct();
+        //load chart_model from model
+        $this->load->model('chart_model');
+      }
+   
 
 	public function index()
 	{
@@ -22,7 +28,18 @@ class DiseaseRate extends CI_Controller {
         $data['title'] = "อัตราการเกิดโรคกับอายุ";
         $this->load->view('head',$data);
 		$this->load->view('navbar');
+        $result1 = $this->chart_model->get_total_age1();
+        $x['data1']=json_encode($result1,JSON_UNESCAPED_UNICODE);
+        $result2 = $this->chart_model->get_total_age1();
+        $x['data2']=json_encode($result2,JSON_UNESCAPED_UNICODE);
+        $result3 = $this->chart_model->get_total_age1();
+        $x['data3']=json_encode($result3,JSON_UNESCAPED_UNICODE);
+        $result4 = $this->chart_model->get_total_age1();
+        $x['data4']=json_encode($result4,JSON_UNESCAPED_UNICODE);
+        $result5 = $this->chart_model->get_total_age1();
+        $x['data5']=json_encode($result5,JSON_UNESCAPED_UNICODE);
         $this->load->view('template/disease rate age');
+        
     }
 	public function get3()
     {
