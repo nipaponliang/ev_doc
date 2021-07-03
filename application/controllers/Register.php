@@ -54,8 +54,8 @@ class Register extends CI_Controller {
                     'protocol'      =>  'smtp',
                     'smtp_host'     =>  'smtpout.secureserver.net',
                     'smtp_port'     =>  80,
-                    'smtp_user'     =>  'nipapon.li@kkumail.com',
-                    'smtp_pass'     =>  '34690854112p',
+                    'smtp_user'     =>  '',
+                    'smtp_pass'     =>  '',
                     'mailtype'      =>  'html',
                     'charset'       =>  'iso-8859-1',
                     'wordwrap'      =>  TRUE
